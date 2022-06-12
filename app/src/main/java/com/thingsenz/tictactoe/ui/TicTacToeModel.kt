@@ -53,7 +53,7 @@ class TicTacToeModel: ViewModel() {
                 }
             }
         }
-        isGameOver = Utils.isWon(game = game,Utils.X) || Utils.isWon(game = game,Utils.O)
+        isGameOver = Utils.isWon(game = game,Utils.X) || Utils.isWon(game = game,Utils.O) || Utils.isFull(game = game)
         winner = Utils.result(game = game,singlePlayer)
     }
 

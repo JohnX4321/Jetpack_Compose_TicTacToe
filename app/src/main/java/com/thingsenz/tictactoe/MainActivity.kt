@@ -39,6 +39,12 @@ class MainActivity : ComponentActivity() {
                 }) {
                     Surface(color = MaterialTheme.colors.background) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally,verticalArrangement = Arrangement.SpaceAround,modifier = Modifier.fillMaxHeight()) {
+                            Box {
+                                if (gameModel.singlePlayer)
+                                    Text(text = "O: You \nX: Computer", fontSize = 22.sp)
+                                else
+                                    Text(text = "O: Player 1 \nX: Player 2",fontSize = 22.sp)
+                            }
                             Grid(game = gameModel.game, onClick = gameModel::play)
                             if (gameModel.isGameOver) {
                                 Box {

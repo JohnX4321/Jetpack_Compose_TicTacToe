@@ -66,7 +66,7 @@ object Utils {
         isWon(game = game, X) -> "${if (singleMode) "YOU" else "X"} WON"
         isWon(game = game, O) -> "${if (singleMode) "COMPUTER" else "O"} WON"
         isFull(game = game) -> "Tied"
-        else -> "Tie"
+        else -> "Tied"
     }
 
 }
